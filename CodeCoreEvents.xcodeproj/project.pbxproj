@@ -34,6 +34,11 @@
 		BB83BFE71AED87A10082CD99 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFD31AED87730082CD99 /* Lato-Light.ttf */; };
 		BB83BFE81AED87A10082CD99 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFD41AED87730082CD99 /* Lato-LightItalic.ttf */; };
 		BB83BFE91AED87A10082CD99 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFD51AED87730082CD99 /* Lato-Regular.ttf */; };
+		BB83BFF01AED91E60082CD99 /* libReactNativeIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB83BFEF1AED91DA0082CD99 /* libReactNativeIcons.a */; };
+		BB83BFF51AED92360082CD99 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFF11AED92360082CD99 /* FontAwesome.otf */; };
+		BB83BFF61AED92360082CD99 /* foundation-icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFF21AED92360082CD99 /* foundation-icons.ttf */; };
+		BB83BFF71AED92360082CD99 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFF31AED92360082CD99 /* ionicons.ttf */; };
+		BB83BFF81AED92360082CD99 /* zocial-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFF41AED92360082CD99 /* zocial-regular-webfont.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +126,13 @@
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RNOverlay;
 		};
+		BB83BFEE1AED91DA0082CD99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB83BFEA1AED91D90082CD99 /* ReactNativeIcons.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2F5A3EB81ACDBF8000439386;
+			remoteInfo = ReactNativeIcons;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -156,6 +168,11 @@
 		BB83BFD31AED87730082CD99 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		BB83BFD41AED87730082CD99 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		BB83BFD51AED87730082CD99 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		BB83BFEA1AED91D90082CD99 /* ReactNativeIcons.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeIcons.xcodeproj; path = "node_modules/react-native-icons/ios/ReactNativeIcons.xcodeproj"; sourceTree = "<group>"; };
+		BB83BFF11AED92360082CD99 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = "node_modules/react-native-icons/ios/ReactNativeIcons/Libraries/FontAwesomeKit/FontAwesome.otf"; sourceTree = "<group>"; };
+		BB83BFF21AED92360082CD99 /* foundation-icons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "foundation-icons.ttf"; path = "node_modules/react-native-icons/ios/ReactNativeIcons/Libraries/FontAwesomeKit/foundation-icons.ttf"; sourceTree = "<group>"; };
+		BB83BFF31AED92360082CD99 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ionicons.ttf; path = "node_modules/react-native-icons/ios/ReactNativeIcons/Libraries/FontAwesomeKit/ionicons.ttf"; sourceTree = "<group>"; };
+		BB83BFF41AED92360082CD99 /* zocial-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zocial-regular-webfont.ttf"; path = "node_modules/react-native-icons/ios/ReactNativeIcons/Libraries/FontAwesomeKit/zocial-regular-webfont.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB83BFF01AED91E60082CD99 /* libReactNativeIcons.a in Frameworks */,
 				BB83BFCA1AED86080082CD99 /* libRNOverlay.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00481BE81AC0C86700671115 /* libRCTWebSocketDebugger.a in Frameworks */,
@@ -293,6 +311,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				BB83BFEA1AED91D90082CD99 /* ReactNativeIcons.xcodeproj */,
 				BB83BFC41AED86010082CD99 /* RNOverlay.xcodeproj */,
 				78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
@@ -349,6 +368,10 @@
 		BB83BFCB1AED87690082CD99 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				BB83BFF11AED92360082CD99 /* FontAwesome.otf */,
+				BB83BFF21AED92360082CD99 /* foundation-icons.ttf */,
+				BB83BFF31AED92360082CD99 /* ionicons.ttf */,
+				BB83BFF41AED92360082CD99 /* zocial-regular-webfont.ttf */,
 				BB83BFCC1AED87730082CD99 /* Lato-Black.ttf */,
 				BB83BFCD1AED87730082CD99 /* Lato-BlackItalic.ttf */,
 				BB83BFCE1AED87730082CD99 /* Lato-Bold.ttf */,
@@ -361,6 +384,14 @@
 				BB83BFD51AED87730082CD99 /* Lato-Regular.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		BB83BFEB1AED91D90082CD99 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB83BFEF1AED91DA0082CD99 /* libReactNativeIcons.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -469,6 +500,10 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
+					ProductGroup = BB83BFEB1AED91D90082CD99 /* Products */;
+					ProjectRef = BB83BFEA1AED91D90082CD99 /* ReactNativeIcons.xcodeproj */;
+				},
+				{
 					ProductGroup = BB83BFC51AED86010082CD99 /* Products */;
 					ProjectRef = BB83BFC41AED86010082CD99 /* RNOverlay.xcodeproj */;
 				},
@@ -559,6 +594,13 @@
 			remoteRef = BB83BFC81AED86010082CD99 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		BB83BFEF1AED91DA0082CD99 /* libReactNativeIcons.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReactNativeIcons.a;
+			remoteRef = BB83BFEE1AED91DA0082CD99 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -573,6 +615,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB83BFF51AED92360082CD99 /* FontAwesome.otf in Resources */,
+				BB83BFF61AED92360082CD99 /* foundation-icons.ttf in Resources */,
+				BB83BFF71AED92360082CD99 /* ionicons.ttf in Resources */,
+				BB83BFF81AED92360082CD99 /* zocial-regular-webfont.ttf in Resources */,
 				BB83BFE61AED87A10082CD99 /* Lato-Italic.ttf in Resources */,
 				BB83BFE01AED87A10082CD99 /* Lato-Black.ttf in Resources */,
 				BB83BFE21AED87A10082CD99 /* Lato-Bold.ttf in Resources */,

@@ -13,7 +13,7 @@ var {
   Navigator,
 } = React;
 
-var UpcomingEventsScreen = require('./Screens/UpcomingEventsScreen');
+var HomeScreen = require('./Screens/HomeScreen');
 
 var CodeCoreEvents = React.createClass({
   getInitialState() {
@@ -28,7 +28,7 @@ var CodeCoreEvents = React.createClass({
   renderScene(route, nav) {
     switch (route.id) {
       case 'upcoming-events':
-        return <UpcomingEventsScreen navigator={nav} />;
+        return <HomeScreen selected={route.id} navigator={nav} />;
       case 'user-info':
         return <Text>User Info</Text>
       default:

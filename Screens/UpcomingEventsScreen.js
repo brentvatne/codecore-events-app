@@ -12,10 +12,10 @@ var {
   View,
   ScrollView,
   TouchableOpacity,
-  AlertIOS,
 } = React;
 
 var NavigationBar = require('../Components/NavigationBar');
+var Icon = require('FAKIconImage');
 
 var EVENTS = require('./Events');
 
@@ -32,7 +32,7 @@ var UpcomingEventsScreen = React.createClass({
           <Text style={styles.date}>{event.date} at {event.time}</Text>
         </View>
         <Text style={styles.title}>{event.title.toUpperCase()}</Text>
-       <View style={styles.footer}>
+        <View style={styles.footer}>
           <Text style={[styles.smallText, styles.remaining]}>{event.remaining} spots remaining</Text>
         </View>
       </View>
@@ -41,12 +41,9 @@ var UpcomingEventsScreen = React.createClass({
 
   render() {
     return (
-      <View style={{flex: 1}}>
-        <NavigationBar title="Upcoming Events" />
-        <ScrollView style={styles.scrollView}>
-          {this.state.events.map((event) => { return this.renderEvent(event) })}
-        </ScrollView>
-      </View>
+      <ScrollView style={styles.scrollView}>
+        {this.state.events.map((event) => { return this.renderEvent(event) })}
+      </ScrollView>
     )
   },
 });
@@ -66,11 +63,11 @@ var styles = StyleSheet.create({
   date: {
     color: "#B4AEAE",
     fontFamily: 'Lato',
-    fontSize: 13,
+    fontSize: 12,
   },
   title: {
     paddingTop: 3,
-    paddingBottom: 4,
+    paddingBottom: 3,
     fontWeight: 'bold',
     fontFamily: 'Lato',
     fontSize: 16,

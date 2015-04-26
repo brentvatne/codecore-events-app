@@ -6,9 +6,10 @@
     "start": "node_modules/react-native/packager/packager.sh"
   },
   "dependencies": {
+    "flux-util": "0.1.1",
     "react-native": "^0.4.0",
+    "react-native-icons": "0.0.5",
     "react-native-modal": "^0.2.12",
-    "react-native-overlay": "^0.1.7",
-    "flux-util": "0.1.1"
+    "react-native-overlay": "^0.1.7"
   }
 }
