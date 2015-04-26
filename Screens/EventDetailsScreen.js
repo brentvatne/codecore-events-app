@@ -6,7 +6,6 @@
 
 var React = require('react-native');
 var {
-  AppRegistry,
   StyleSheet,
   Text,
   View,
@@ -32,7 +31,7 @@ var EventDetailsScreen = React.createClass({
     return (
       <View style={styles.container}>
         <View style={styles.header}>
-          <Image source={{uri: "https://facebook.github.io/react/img/logo_og.png"}}
+          <Image source={{uri: this.props.event.splashImageUrl}}
                  style={styles.headerImage}>
             <BlurView blurType="dark" style={styles.header}>
               <Text style={styles.title}>
@@ -41,12 +40,13 @@ var EventDetailsScreen = React.createClass({
             </BlurView>
           </Image>
         </View>
+        <View style={styles.subheader}>
+          <Text style={styles.subheaderText}>
+            {this.props.event.date}, {this.props.event.time}
+          </Text>
+        </View>
+
         <ScrollView style={{flex: 1}}>
-          <View style={styles.subheader}>
-            <Text style={styles.subheaderText}>
-              {this.props.event.date}, {this.props.event.time}
-            </Text>
-          </View>
           <View style={styles.description}>
             <Text style={styles.descriptionText}>
               {this.props.event.description}
@@ -118,6 +118,7 @@ var styles = StyleSheet.create({
     marginTop: 2,
   },
   presenter: {
+    alignItems: 'center',
     flexDirection: 'row',
     paddingLeft: 10,
     marginTop: 10,
@@ -163,8 +164,7 @@ var styles = StyleSheet.create({
     resizeMode: 'cover',
   },
   title: {
-    flex: 1,
-    paddingRight: 10,
+    paddingRight: 40,
     fontFamily: 'Lato',
     position: 'absolute',
     bottom: 10,

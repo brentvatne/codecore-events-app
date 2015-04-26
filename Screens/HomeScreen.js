@@ -6,7 +6,6 @@
 
 var React = require('react-native');
 var {
-  AppRegistry,
   StyleSheet,
   Text,
   View,
@@ -19,24 +18,26 @@ var SMXTabBarItemIOS = SMXTabBarIOS.Item;
 
 var NavigationBar = require('../Components/NavigationBar');
 var UpcomingEventsScreen = require('./UpcomingEventsScreen');
+var ProfileScreen = require('./ProfileScreen');
 
 var HomeScreen = React.createClass({
   getInitialState() {
     return {
-      selected: this.props.selected || 'upcoming-events'
+      selected: this.props.selected || 'upcoming-events',
+      title: this.props.title || 'Upcoming Events',
     }
   },
 
   render() {
     return (
       <View style={{flex: 1}}>
-        <NavigationBar title="Upcoming Events" />
+        <NavigationBar title={this.state.title} />
         <SMXTabBarIOS>
           <SMXTabBarItemIOS
                   iconName={'ion|ios-calendar-outline'}
                   title={'Events'}
                   selected={this.state.selected === 'upcoming-events'}
-                  onPress={() => { this.setState({selected: 'upcoming-events'}) }} >
+                  onPress={() => { this.setState({selected: 'upcoming-events', title: 'Upcoming Events',}) }} >
             <UpcomingEventsScreen navigator={this.props.navigator} />
           </SMXTabBarItemIOS>
 
@@ -44,7 +45,7 @@ var HomeScreen = React.createClass({
                   iconName={'ion|ios-star-outline'}
                   title={'My Schedule'}
                   selected={this.state.selected === 'my-schedule'}
-                  onPress={() => { this.setState({selected: 'my-schedule'}) }} >
+                  onPress={() => { this.setState({selected: 'my-schedule', title: 'My Schedule',}) }} >
             <Text>My Schedule</Text>
           </SMXTabBarItemIOS>
 
@@ -52,7 +53,7 @@ var HomeScreen = React.createClass({
                   iconName={'ion|ios-navigate-outline'}
                   title={'Map'}
                   selected={this.state.selected === 'map'}
-                  onPress={() => { this.setState({selected: 'map'}) }} >
+                  onPress={() => { this.setState({selected: 'map', title: 'Map',}) }} >
             <Text>Map</Text>
           </SMXTabBarItemIOS>
 
@@ -60,8 +61,9 @@ var HomeScreen = React.createClass({
                   iconName={'ion|ios-person-outline'}
                   title={'Profile'}
                   selected={this.state.selected === 'profile'}
-                  onPress={() => { this.setState({selected: 'profile'}) }} >
-            <Text>Profile</Text>
+                  onPress={() => { this.setState({selected: 'profile', title: 'Profile',}) }} >
+
+            <ProfileScreen navigator={this.props.navigator} />
           </SMXTabBarItemIOS>
         </SMXTabBarIOS>
       </View>
