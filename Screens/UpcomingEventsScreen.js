@@ -11,12 +11,11 @@ var {
   Text,
   View,
   ScrollView,
-  TouchableOpacity,
+  TouchableHighlight,
 } = React;
 
 var NavigationBar = require('../Components/NavigationBar');
 var Icon = require('FAKIconImage');
-
 var EVENTS = require('./Events');
 
 var UpcomingEventsScreen = React.createClass({
@@ -25,17 +24,23 @@ var UpcomingEventsScreen = React.createClass({
     return {events: EVENTS};
   },
 
+  showEventDetails(event:any) {
+    this.props.navigator.push({id: 'event-details', event: event});
+  },
+
   renderEvent(event:any) {
     return (
-      <View style={styles.wrapper}>
-        <View style={styles.header}>
-          <Text style={styles.date}>{event.date} at {event.time}</Text>
+      <TouchableHighlight underlayColor="#FFE5E5" onPress={() => { this.showEventDetails(event) }}>
+        <View style={styles.wrapper}>
+          <View style={styles.header}>
+            <Text style={styles.date}>{event.date} at {event.time}</Text>
+          </View>
+          <Text style={styles.title}>{event.title}</Text>
+          <View style={styles.footer}>
+            <Text style={[styles.smallText, styles.remaining]}>{event.remaining} spots remaining</Text>
+          </View>
         </View>
-        <Text style={styles.title}>{event.title.toUpperCase()}</Text>
-        <View style={styles.footer}>
-          <Text style={[styles.smallText, styles.remaining]}>{event.remaining} spots remaining</Text>
-        </View>
-      </View>
+      </TouchableHighlight>
     );
   },
 
@@ -66,8 +71,9 @@ var styles = StyleSheet.create({
     fontSize: 12,
   },
   title: {
-    paddingTop: 3,
+    paddingTop: 2,
     paddingBottom: 3,
+    paddingRight: 15,
     fontWeight: 'bold',
     fontFamily: 'Lato',
     fontSize: 16,

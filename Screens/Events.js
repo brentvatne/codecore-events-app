@@ -1,13 +1,14 @@
 module.exports = [
-  {title: 'INTRODUCTION TO REACT NATIVE',
+  {title: 'Introduction to React Native',
    remaining: 12,
    presenter: 'Brent Vatne',
-   bio: 'Brent is a senior developer who is a contributor to React Native. Brent is also an instructor and a TA at CodeCore.',
-   description: '',
+   presenterImageUrl: 'https://s3.amazonaws.com/corecore-events/image/38/medium/13e1189.jpg?1430072432',
+   bio: 'Brent is a Senior Developer at Madriska Inc, a contributor to React Native and an instructor and TA at CodeCore.',
+   description: 'React Native enables you to build world-class application experiences on native platforms using a consistent developer experience based on JavaScript and React. The focus of React Native is on developer efficiency across all the platforms you care about — learn once, write anywhere. Facebook uses React Native in multiple production apps and will continue investing in React Native.',
    date: 'Monday, Apr 27, 2015',
    time: '12:00 PM - 01:00 PM'},
 
-  {title: 'LEADERSHIP, CULTURE, STRATEGY & EXECUTION IN A TECH START-UP',
+  {title: 'Leadership, culture, strategy & execution in a tech start-up',
    presenter: 'LUKE AULIN',
    remaining: 3,
    bio: 'Luke Aulin is the founder of RTown.ca',
@@ -15,7 +16,7 @@ module.exports = [
    date: 'Tuesday, Apr 28, 2015',
    time: '12:00 PM - 01:00 PM'},
 
-  {title: 'HOW TO NOT BE A TERRIBLE PROGRAMMER',
+  {title: 'How to not be a terrible programmer',
    presenter: 'CLARKE BRUNSDON',
    remaining: 25,
    description: '',
@@ -23,7 +24,7 @@ module.exports = [
    date: 'Wednesday, Apr 29, 2015',
    time: '12:00 PM - 01:00 PM'},
 
-  {title: 'MACHINE LEARNING',
+  {title: 'Machine Learning',
    presenter: 'CHARLES ILIYA KREMPEAUX',
    bio: 'Charles Iliya Krempeaux from ea.ca',
    description: '',
@@ -31,7 +32,7 @@ module.exports = [
    date: 'Thursday, Apr 30, 2015',
    time: '12:00 PM - 01:00 PM'},
 
-  {title: "ESSENTIALS EVERY DEVELOPER SHOULD KNOW ABOUT 'INTERNATIONAL'",
+  {title: "Essentials every developer should know about 'International'",
    presenter: 'JIM DELAHUNT',
    remaining: 39,
    bio: 'Jim DeLaHunt from jdlh.com/en/',

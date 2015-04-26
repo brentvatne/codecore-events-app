@@ -37,7 +37,7 @@ var HomeScreen = React.createClass({
                   title={'Events'}
                   selected={this.state.selected === 'upcoming-events'}
                   onPress={() => { this.setState({selected: 'upcoming-events'}) }} >
-            <UpcomingEventsScreen />
+            <UpcomingEventsScreen navigator={this.props.navigator} />
           </SMXTabBarItemIOS>
 
           <SMXTabBarItemIOS
@@ -69,22 +69,6 @@ var HomeScreen = React.createClass({
   },
 });
 
-        // <TabBarIOS selectedTab={this.props.selected}>
-        //   <TabBarIOS.Item
-        //     title="Events"
-        //     selected={this.props.selected == "upcoming-events"}>
-        //     <UpcomingEventsScreen />
-        //   </TabBarIOS.Item>
-        //   <TabBarIOS.Item title="My Schedule" selected={false}>
-        //     <View />
-        //   </TabBarIOS.Item>
-        //   <TabBarIOS.Item title="Map" selected={false}>
-        //     <View />
-        //   </TabBarIOS.Item>
-        //   <TabBarIOS.Item title="Profile" selected={false}>
-        //     <View />
-        //   </TabBarIOS.Item>
-        // </TabBarIOS>
 
 var styles = StyleSheet.create({
   scrollView: {

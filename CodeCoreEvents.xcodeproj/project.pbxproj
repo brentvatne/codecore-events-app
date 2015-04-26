@@ -24,21 +24,23 @@
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		BB83BFCA1AED86080082CD99 /* libRNOverlay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB83BFC91AED86010082CD99 /* libRNOverlay.a */; };
-		BB83BFE01AED87A10082CD99 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFCC1AED87730082CD99 /* Lato-Black.ttf */; };
-		BB83BFE11AED87A10082CD99 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFCD1AED87730082CD99 /* Lato-BlackItalic.ttf */; };
-		BB83BFE21AED87A10082CD99 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFCE1AED87730082CD99 /* Lato-Bold.ttf */; };
-		BB83BFE31AED87A10082CD99 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFCF1AED87730082CD99 /* Lato-BoldItalic.ttf */; };
-		BB83BFE41AED87A10082CD99 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFD01AED87730082CD99 /* Lato-Hairline.ttf */; };
-		BB83BFE51AED87A10082CD99 /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFD11AED87730082CD99 /* Lato-HairlineItalic.ttf */; };
-		BB83BFE61AED87A10082CD99 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFD21AED87730082CD99 /* Lato-Italic.ttf */; };
-		BB83BFE71AED87A10082CD99 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFD31AED87730082CD99 /* Lato-Light.ttf */; };
-		BB83BFE81AED87A10082CD99 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFD41AED87730082CD99 /* Lato-LightItalic.ttf */; };
-		BB83BFE91AED87A10082CD99 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFD51AED87730082CD99 /* Lato-Regular.ttf */; };
 		BB83BFF01AED91E60082CD99 /* libReactNativeIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB83BFEF1AED91DA0082CD99 /* libReactNativeIcons.a */; };
 		BB83BFF51AED92360082CD99 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFF11AED92360082CD99 /* FontAwesome.otf */; };
 		BB83BFF61AED92360082CD99 /* foundation-icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFF21AED92360082CD99 /* foundation-icons.ttf */; };
 		BB83BFF71AED92360082CD99 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFF31AED92360082CD99 /* ionicons.ttf */; };
 		BB83BFF81AED92360082CD99 /* zocial-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFF41AED92360082CD99 /* zocial-regular-webfont.ttf */; };
+		BB83C0031AED9B8F0082CD99 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFF91AED9B8F0082CD99 /* Lato-Black.ttf */; };
+		BB83C0041AED9B8F0082CD99 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFFA1AED9B8F0082CD99 /* Lato-BlackItalic.ttf */; };
+		BB83C0051AED9B8F0082CD99 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFFB1AED9B8F0082CD99 /* Lato-Bold.ttf */; };
+		BB83C0061AED9B8F0082CD99 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFFC1AED9B8F0082CD99 /* Lato-BoldItalic.ttf */; };
+		BB83C0071AED9B8F0082CD99 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFFD1AED9B8F0082CD99 /* Lato-Hairline.ttf */; };
+		BB83C0081AED9B8F0082CD99 /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFFE1AED9B8F0082CD99 /* Lato-HairlineItalic.ttf */; };
+		BB83C0091AED9B8F0082CD99 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83BFFF1AED9B8F0082CD99 /* Lato-Italic.ttf */; };
+		BB83C00A1AED9B8F0082CD99 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83C0001AED9B8F0082CD99 /* Lato-Light.ttf */; };
+		BB83C00B1AED9B8F0082CD99 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83C0011AED9B8F0082CD99 /* Lato-LightItalic.ttf */; };
+		BB83C00C1AED9B8F0082CD99 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB83C0021AED9B8F0082CD99 /* Lato-Regular.ttf */; };
+		BB83C0121AED9DB20082CD99 /* BlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB83C00F1AED9DB20082CD99 /* BlurView.m */; };
+		BB83C0131AED9DB20082CD99 /* BlurViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB83C0111AED9DB20082CD99 /* BlurViewManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,21 +160,25 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		BB83BFC41AED86010082CD99 /* RNOverlay.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNOverlay.xcodeproj; path = "node_modules/react-native-overlay/RNOverlay.xcodeproj"; sourceTree = "<group>"; };
-		BB83BFCC1AED87730082CD99 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
-		BB83BFCD1AED87730082CD99 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
-		BB83BFCE1AED87730082CD99 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
-		BB83BFCF1AED87730082CD99 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
-		BB83BFD01AED87730082CD99 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Hairline.ttf"; sourceTree = "<group>"; };
-		BB83BFD11AED87730082CD99 /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
-		BB83BFD21AED87730082CD99 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
-		BB83BFD31AED87730082CD99 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
-		BB83BFD41AED87730082CD99 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
-		BB83BFD51AED87730082CD99 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		BB83BFEA1AED91D90082CD99 /* ReactNativeIcons.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeIcons.xcodeproj; path = "node_modules/react-native-icons/ios/ReactNativeIcons.xcodeproj"; sourceTree = "<group>"; };
 		BB83BFF11AED92360082CD99 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = "node_modules/react-native-icons/ios/ReactNativeIcons/Libraries/FontAwesomeKit/FontAwesome.otf"; sourceTree = "<group>"; };
 		BB83BFF21AED92360082CD99 /* foundation-icons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "foundation-icons.ttf"; path = "node_modules/react-native-icons/ios/ReactNativeIcons/Libraries/FontAwesomeKit/foundation-icons.ttf"; sourceTree = "<group>"; };
 		BB83BFF31AED92360082CD99 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ionicons.ttf; path = "node_modules/react-native-icons/ios/ReactNativeIcons/Libraries/FontAwesomeKit/ionicons.ttf"; sourceTree = "<group>"; };
 		BB83BFF41AED92360082CD99 /* zocial-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zocial-regular-webfont.ttf"; path = "node_modules/react-native-icons/ios/ReactNativeIcons/Libraries/FontAwesomeKit/zocial-regular-webfont.ttf"; sourceTree = "<group>"; };
+		BB83BFF91AED9B8F0082CD99 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Black.ttf"; path = "Fonts/Lato-Black.ttf"; sourceTree = "<group>"; };
+		BB83BFFA1AED9B8F0082CD99 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-BlackItalic.ttf"; path = "Fonts/Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		BB83BFFB1AED9B8F0082CD99 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bold.ttf"; path = "Fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
+		BB83BFFC1AED9B8F0082CD99 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-BoldItalic.ttf"; path = "Fonts/Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		BB83BFFD1AED9B8F0082CD99 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Hairline.ttf"; path = "Fonts/Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		BB83BFFE1AED9B8F0082CD99 /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-HairlineItalic.ttf"; path = "Fonts/Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		BB83BFFF1AED9B8F0082CD99 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Italic.ttf"; path = "Fonts/Lato-Italic.ttf"; sourceTree = "<group>"; };
+		BB83C0001AED9B8F0082CD99 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Light.ttf"; path = "Fonts/Lato-Light.ttf"; sourceTree = "<group>"; };
+		BB83C0011AED9B8F0082CD99 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-LightItalic.ttf"; path = "Fonts/Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		BB83C0021AED9B8F0082CD99 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Regular.ttf"; path = "Fonts/Lato-Regular.ttf"; sourceTree = "<group>"; };
+		BB83C00E1AED9DB20082CD99 /* BlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlurView.h; path = "node_modules/react-native-blur/RNBlur/BlurView.h"; sourceTree = "<group>"; };
+		BB83C00F1AED9DB20082CD99 /* BlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlurView.m; path = "node_modules/react-native-blur/RNBlur/BlurView.m"; sourceTree = "<group>"; };
+		BB83C0101AED9DB20082CD99 /* BlurViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlurViewManager.h; path = "node_modules/react-native-blur/RNBlur/BlurViewManager.h"; sourceTree = "<group>"; };
+		BB83C0111AED9DB20082CD99 /* BlurViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlurViewManager.m; path = "node_modules/react-native-blur/RNBlur/BlurViewManager.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +317,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				BB83C00D1AED9D9D0082CD99 /* Blur */,
 				BB83BFEA1AED91D90082CD99 /* ReactNativeIcons.xcodeproj */,
 				BB83BFC41AED86010082CD99 /* RNOverlay.xcodeproj */,
 				78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */,
@@ -368,20 +375,20 @@
 		BB83BFCB1AED87690082CD99 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				BB83BFF91AED9B8F0082CD99 /* Lato-Black.ttf */,
+				BB83BFFA1AED9B8F0082CD99 /* Lato-BlackItalic.ttf */,
+				BB83BFFB1AED9B8F0082CD99 /* Lato-Bold.ttf */,
+				BB83BFFC1AED9B8F0082CD99 /* Lato-BoldItalic.ttf */,
+				BB83BFFD1AED9B8F0082CD99 /* Lato-Hairline.ttf */,
+				BB83BFFE1AED9B8F0082CD99 /* Lato-HairlineItalic.ttf */,
+				BB83BFFF1AED9B8F0082CD99 /* Lato-Italic.ttf */,
+				BB83C0001AED9B8F0082CD99 /* Lato-Light.ttf */,
+				BB83C0011AED9B8F0082CD99 /* Lato-LightItalic.ttf */,
+				BB83C0021AED9B8F0082CD99 /* Lato-Regular.ttf */,
 				BB83BFF11AED92360082CD99 /* FontAwesome.otf */,
 				BB83BFF21AED92360082CD99 /* foundation-icons.ttf */,
 				BB83BFF31AED92360082CD99 /* ionicons.ttf */,
 				BB83BFF41AED92360082CD99 /* zocial-regular-webfont.ttf */,
-				BB83BFCC1AED87730082CD99 /* Lato-Black.ttf */,
-				BB83BFCD1AED87730082CD99 /* Lato-BlackItalic.ttf */,
-				BB83BFCE1AED87730082CD99 /* Lato-Bold.ttf */,
-				BB83BFCF1AED87730082CD99 /* Lato-BoldItalic.ttf */,
-				BB83BFD01AED87730082CD99 /* Lato-Hairline.ttf */,
-				BB83BFD11AED87730082CD99 /* Lato-HairlineItalic.ttf */,
-				BB83BFD21AED87730082CD99 /* Lato-Italic.ttf */,
-				BB83BFD31AED87730082CD99 /* Lato-Light.ttf */,
-				BB83BFD41AED87730082CD99 /* Lato-LightItalic.ttf */,
-				BB83BFD51AED87730082CD99 /* Lato-Regular.ttf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -392,6 +399,17 @@
 				BB83BFEF1AED91DA0082CD99 /* libReactNativeIcons.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BB83C00D1AED9D9D0082CD99 /* Blur */ = {
+			isa = PBXGroup;
+			children = (
+				BB83C00E1AED9DB20082CD99 /* BlurView.h */,
+				BB83C00F1AED9DB20082CD99 /* BlurView.m */,
+				BB83C0101AED9DB20082CD99 /* BlurViewManager.h */,
+				BB83C0111AED9DB20082CD99 /* BlurViewManager.m */,
+			);
+			name = Blur;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -615,23 +633,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB83C00A1AED9B8F0082CD99 /* Lato-Light.ttf in Resources */,
 				BB83BFF51AED92360082CD99 /* FontAwesome.otf in Resources */,
+				BB83C0051AED9B8F0082CD99 /* Lato-Bold.ttf in Resources */,
+				BB83C0071AED9B8F0082CD99 /* Lato-Hairline.ttf in Resources */,
 				BB83BFF61AED92360082CD99 /* foundation-icons.ttf in Resources */,
 				BB83BFF71AED92360082CD99 /* ionicons.ttf in Resources */,
+				BB83C0061AED9B8F0082CD99 /* Lato-BoldItalic.ttf in Resources */,
 				BB83BFF81AED92360082CD99 /* zocial-regular-webfont.ttf in Resources */,
-				BB83BFE61AED87A10082CD99 /* Lato-Italic.ttf in Resources */,
-				BB83BFE01AED87A10082CD99 /* Lato-Black.ttf in Resources */,
-				BB83BFE21AED87A10082CD99 /* Lato-Bold.ttf in Resources */,
-				BB83BFE71AED87A10082CD99 /* Lato-Light.ttf in Resources */,
+				BB83C0081AED9B8F0082CD99 /* Lato-HairlineItalic.ttf in Resources */,
+				BB83C0091AED9B8F0082CD99 /* Lato-Italic.ttf in Resources */,
+				BB83C0031AED9B8F0082CD99 /* Lato-Black.ttf in Resources */,
+				BB83C00B1AED9B8F0082CD99 /* Lato-LightItalic.ttf in Resources */,
+				BB83C0041AED9B8F0082CD99 /* Lato-BlackItalic.ttf in Resources */,
 				008F07F31AC5B25A0029DE68 /* main.jsbundle in Resources */,
-				BB83BFE11AED87A10082CD99 /* Lato-BlackItalic.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				BB83BFE81AED87A10082CD99 /* Lato-LightItalic.ttf in Resources */,
-				BB83BFE51AED87A10082CD99 /* Lato-HairlineItalic.ttf in Resources */,
-				BB83BFE31AED87A10082CD99 /* Lato-BoldItalic.ttf in Resources */,
-				BB83BFE91AED87A10082CD99 /* Lato-Regular.ttf in Resources */,
-				BB83BFE41AED87A10082CD99 /* Lato-Hairline.ttf in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				BB83C00C1AED9B8F0082CD99 /* Lato-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,6 +670,8 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				BB83C0121AED9DB20082CD99 /* BlurView.m in Sources */,
+				BB83C0131AED9DB20082CD99 /* BlurViewManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
