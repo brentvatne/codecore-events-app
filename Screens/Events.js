@@ -1,0 +1,41 @@
+module.exports = [
+  {title: 'INTRODUCTION TO REACT NATIVE',
+   remaining: 12,
+   presenter: 'Brent Vatne',
+   bio: 'Brent is a senior developer who is a contributor to React Native. Brent is also an instructor and a TA at CodeCore.',
+   description: '',
+   date: 'Monday, Apr 27, 2015',
+   time: '12:00 PM - 01:00 PM'},
+
+  {title: 'LEADERSHIP, CULTURE, STRATEGY & EXECUTION IN A TECH START-UP',
+   presenter: 'LUKE AULIN',
+   remaining: 3,
+   bio: 'Luke Aulin is the founder of RTown.ca',
+   description: '',
+   date: 'Tuesday, Apr 28, 2015',
+   time: '12:00 PM - 01:00 PM'},
+
+  {title: 'HOW TO NOT BE A TERRIBLE PROGRAMMER',
+   presenter: 'CLARKE BRUNSDON',
+   remaining: 25,
+   description: '',
+   bio: 'Clarke Brunsdon from FreeRunningTechnologies.com',
+   date: 'Wednesday, Apr 29, 2015',
+   time: '12:00 PM - 01:00 PM'},
+
+  {title: 'MACHINE LEARNING',
+   presenter: 'CHARLES ILIYA KREMPEAUX',
+   bio: 'Charles Iliya Krempeaux from ea.ca',
+   description: '',
+   remaining: 8,
+   date: 'Thursday, Apr 30, 2015',
+   time: '12:00 PM - 01:00 PM'},
+
+  {title: "ESSENTIALS EVERY DEVELOPER SHOULD KNOW ABOUT 'INTERNATIONAL'",
+   presenter: 'JIM DELAHUNT',
+   remaining: 39,
+   bio: 'Jim DeLaHunt from jdlh.com/en/',
+   description: '',
+   date: 'Friday, Apr 31, 2015',
+   time: '12:00 PM - 01:00 PM'}
+]
