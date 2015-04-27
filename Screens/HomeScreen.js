@@ -11,6 +11,7 @@ var {
   View,
   ScrollView,
   TouchableOpacity,
+  ActivityIndicatorIOS,
 } = React;
 
 var SMXTabBarIOS = require('SMXTabBarIOS');
@@ -19,12 +20,39 @@ var SMXTabBarItemIOS = SMXTabBarIOS.Item;
 var NavigationBar = require('../Components/NavigationBar');
 var UpcomingEventsScreen = require('./UpcomingEventsScreen');
 var ProfileScreen = require('./ProfileScreen');
+var AppActions = require('../Actions/AppActions');
+var EventStore = require('../Stores/EventStore');
 
 var HomeScreen = React.createClass({
-  getInitialState() {
+  getInitialState():any {
     return {
+      events: [],
+      loading: true,
+      registeredEvents: [],
       selected: this.props.selected || 'upcoming-events',
       title: this.props.title || 'Upcoming Events',
+    }
+  },
+
+  componentWillMount() {
+    EventStore.addChangeListener(this.updateEventsFromStore);
+    AppActions.fetchEvents();
+  },
+
+  componentWillUnmount() {
+    EventStore.removeChangeListener(this.updateEventsFromStore);
+  },
+
+  updateEventsFromStore() {
+    var events = EventStore.getState();
+    this.setState({events: events.all, registeredEvents: events.registered, loading: false});
+  },
+
+  renderLoading() {
+    if (this.state.loading) {
+      return (
+        <ActivityIndicatorIOS animated={true} size='small' style={{marginTop: 30}} />
+      )
     }
   },
 
@@ -38,7 +66,10 @@ var HomeScreen = React.createClass({
                   title={'Events'}
                   selected={this.state.selected === 'upcoming-events'}
                   onPress={() => { this.setState({selected: 'upcoming-events', title: 'Upcoming Events',}) }} >
-            <UpcomingEventsScreen navigator={this.props.navigator} />
+             <View style={{flex: 1}}>
+               {this.renderLoading()}
+               <UpcomingEventsScreen events={this.state.events} navigator={this.props.navigator} />
+             </View>
           </SMXTabBarItemIOS>
 
           <SMXTabBarItemIOS
@@ -70,7 +101,6 @@ var HomeScreen = React.createClass({
     )
   },
 });
-
 
 var styles = StyleSheet.create({
   scrollView: {

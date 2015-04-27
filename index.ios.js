@@ -15,6 +15,8 @@ var {
   AlertIOS,
 } = React;
 
+var AppActions = require('./Actions/AppActions');
+var EventStore = require('./Stores/EventStore');
 var HomeScreen = require('./Screens/HomeScreen');
 var EventDetailsScreen = require('./Screens/EventDetailsScreen');
 

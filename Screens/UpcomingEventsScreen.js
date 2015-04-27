@@ -18,11 +18,6 @@ var Icon = require('FAKIconImage');
 var EVENTS = require('./Events');
 
 var UpcomingEventsScreen = React.createClass({
-
-  getInitialState() {
-    return {events: EVENTS};
-  },
-
   showEventDetails(event:any) {
     this.props.navigator.push({id: 'event-details', event: event});
   },
@@ -46,7 +41,7 @@ var UpcomingEventsScreen = React.createClass({
   render() {
     return (
       <ScrollView style={styles.scrollView}>
-        {this.state.events.map((event) => { return this.renderEvent(event) })}
+        {this.props.events.map((event) => { return this.renderEvent(event) })}
       </ScrollView>
     )
   },
