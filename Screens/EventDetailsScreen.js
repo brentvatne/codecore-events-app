@@ -13,6 +13,7 @@ var {
   ScrollView,
   TouchableOpacity,
   AlertIOS,
+  LinkingIOS,
 } = React;
 
 var AppActions = require('../Actions/AppActions');
@@ -20,6 +21,7 @@ var BlurView = require('react-native-blur').BlurView;
 var Overlay = require('react-native-overlay');
 var EventStore = require('../Stores/EventStore');
 var ActionSheetIOS = require('react-native/Libraries/ActionSheetIOS/ActionSheetIOS');
+var Icon = require('FAKIconImage');
 
 var EventDetailsScreen = React.createClass({
   componentWillMount() {
@@ -69,6 +71,48 @@ var EventDetailsScreen = React.createClass({
     }
   },
 
+  renderTwitterLink() {
+    var twitter = this.props.event.twitter;
+    if (twitter) {
+      return (
+        <TouchableOpacity onPress={() => { LinkingIOS.openURL(twitter) }}>
+          <View style={styles.socialLink}>
+            <Icon name='ion|social-twitter' size={15} color='#00b0ed' style={{width: 15, height: 15, marginRight: 2,}} />
+            <Text style={styles.socialLinkText}>Twitter</Text>
+          </View>
+        </TouchableOpacity>
+      )
+    }
+  },
+
+  renderFacebookLink() {
+    var facebook = this.props.event.facebook;
+    if (facebook) {
+      return (
+        <TouchableOpacity onPress={() => { LinkingIOS.openURL(facebook) }}>
+          <View style={styles.socialLink}>
+            <Icon name='ion|social-facebook' size={15} color='#3b5998' style={{width: 15, height: 15, marginRight: 2,}} />
+            <Text style={styles.socialLinkText}>Facebook</Text>
+          </View>
+        </TouchableOpacity>
+      )
+    }
+  },
+
+  renderLinkedInLink() {
+    var linkedin = this.props.event.linkedin;
+    if (linkedin) {
+      return (
+        <TouchableOpacity onPress={() => { LinkingIOS.openURL(linkedin) }}>
+          <View style={styles.socialLink}>
+            <Icon name='ion|social-linkedin' size={15} color='#006699' style={{width: 15, height: 15, marginRight: 2,}} />
+            <Text style={styles.socialLinkText}>LinkedIn</Text>
+          </View>
+        </TouchableOpacity>
+      )
+    }
+  },
+
   render() {
     return (
       <View style={styles.container}>
@@ -99,6 +143,11 @@ var EventDetailsScreen = React.createClass({
             <View style={styles.presenterInformation}>
               <Text style={styles.presenterName}>{this.state.event.presenter}</Text>
               <Text style={styles.presenterBio}>{this.state.event.bio}</Text>
+              <View style={styles.socialLinks}>
+                {this.renderTwitterLink()}
+                {this.renderFacebookLink()}
+                {this.renderLinkedInLink()}
+              </View>
             </View>
           </View>
         </ScrollView>
@@ -123,6 +172,19 @@ var EventDetailsScreen = React.createClass({
 var HEADER_HEIGHT = 150;
 
 var styles = StyleSheet.create({
+  socialLinkText: {
+    fontWeight: '300',
+    fontFamily: 'Lato',
+    fontSize: 12,
+  },
+  socialLinks: {
+    marginTop: 8,
+    flexDirection: 'row',
+  },
+  socialLink: {
+    marginRight: 5,
+    flexDirection: 'row',
+  },
   actions: {
     height: 50,
     padding: 5,
@@ -159,7 +221,7 @@ var styles = StyleSheet.create({
     marginTop: 2,
   },
   presenter: {
-    alignItems: 'center',
+    alignItems: 'flex-start',
     flexDirection: 'row',
     paddingLeft: 10,
     marginTop: 10,
@@ -179,6 +241,7 @@ var styles = StyleSheet.create({
     fontFamily: 'Lato',
     fontSize: 12,
     fontWeight: '300',
+    lineHeight: 16,
   },
   subheader: {
     padding: 10,
