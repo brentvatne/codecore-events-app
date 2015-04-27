@@ -8,6 +8,7 @@ module.exports = {
       actionType: AppConstants.UPDATE_PROFILE,
       data: newProfile,
     });
+    Api.fetchEvents(newProfile.email);
   },
 
   registerForEvent(id) {

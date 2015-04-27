@@ -12,7 +12,7 @@ var _profile = {};
 
 var store = createStore({
   setState(profile) {
-    _profile = profile;
+    _profile = profile || {};
   },
 
   getState() {
@@ -25,7 +25,6 @@ var store = createStore({
     switch(action.actionType) {
       case AppConstants.UPDATE_PROFILE:
         _profile = action.data;
-        console.log('updated!');
         store.emitChange(action);
         break;
     }

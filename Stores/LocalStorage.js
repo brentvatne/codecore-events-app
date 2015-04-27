@@ -17,6 +17,7 @@ var {
 
 var PREFIX = '@CodeCoreEvents:';
 var PROFILE_KEY = PREFIX + 'profile';
+var REGISTERED_EVENTS = PREFIX + 'profile';
 
 var store = createStore({
   bootstrap(complete) {
@@ -42,12 +43,8 @@ var store = createStore({
     switch(action.actionType) {
       case AppConstants.UPDATE_PROFILE:
         AsyncStorage.setItem(PROFILE_KEY, JSON.stringify(action.data), (error) => {
-          if (error) {
-            console.log('Error setting profile in local storage! ' + error.message);
-          } else {
-            store.emitChange(action);
-          }
-        })
+          store.emitChange(action);
+        });
         break;
     }
 

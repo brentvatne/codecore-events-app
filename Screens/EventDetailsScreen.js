@@ -12,51 +12,85 @@ var {
   Image,
   ScrollView,
   TouchableOpacity,
+  AlertIOS,
 } = React;
 
+var AppActions = require('../Actions/AppActions');
 var BlurView = require('react-native-blur').BlurView;
 var Overlay = require('react-native-overlay');
+var EventStore = require('../Stores/EventStore');
 
 var EventDetailsScreen = React.createClass({
+  componentWillMount() {
+    EventStore.addChangeListener(this.updateEventFromStore);
+  },
+
+  componentWillUnmount() {
+    EventStore.removeChangeListener(this.updateEventFromStore);
+  },
+
+  updateEventFromStore() {
+    EventStore.getState().all.forEach((event) => {
+      if (event.id == this.state.event.id) {
+        this.setState({event: event});
+      }
+    });
+  },
 
   getInitialState() {
-    return {};
+    return {event: this.props.event};
   },
 
   goBack() {
     this.props.navigator.pop();
   },
 
+  performRegistration() {
+    AppActions.registerForEvent(this.props.event.id);
+  },
+
+  renderRegistrationButton() {
+    if (this.state.event.isRegistered) {
+      return (<Text style={styles.actionText}>Registered!</Text>)
+    } else {
+      return (
+        <TouchableOpacity onPress={this.performRegistration}>
+          <Text style={styles.actionText}>Register</Text>
+        </TouchableOpacity>
+      )
+    }
+  },
+
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.header}>
-          <Image source={{uri: this.props.event.splashImageUrl}}
+          <Image source={{uri: this.state.event.splashImageUrl}}
                  style={styles.headerImage}>
             <BlurView blurType="dark" style={styles.header}>
               <Text style={styles.title}>
-                {this.props.event.title}
+                {this.state.event.title}
               </Text>
             </BlurView>
           </Image>
         </View>
         <View style={styles.subheader}>
           <Text style={styles.subheaderText}>
-            {this.props.event.date}, {this.props.event.time}
+            {this.state.event.date}, {this.state.event.time}
           </Text>
         </View>
 
         <ScrollView style={{flex: 1}}>
           <View style={styles.description}>
             <Text style={styles.descriptionText}>
-              {this.props.event.description}
+              {this.state.event.description}
             </Text>
           </View>
           <View style={styles.presenter}>
-            <Image source={{uri: this.props.event.presenterImageUrl}} style={styles.presenterImage} />
+            <Image source={{uri: this.state.event.presenterImageUrl}} style={styles.presenterImage} />
             <View style={styles.presenterInformation}>
-              <Text style={styles.presenterName}>{this.props.event.presenter}</Text>
-              <Text style={styles.presenterBio}>{this.props.event.bio}</Text>
+              <Text style={styles.presenterName}>{this.state.event.presenter}</Text>
+              <Text style={styles.presenterBio}>{this.state.event.bio}</Text>
             </View>
           </View>
         </ScrollView>
@@ -67,9 +101,7 @@ var EventDetailsScreen = React.createClass({
           </TouchableOpacity>
         </View>
         <View style={styles.actions}>
-          <TouchableOpacity>
-            <Text style={styles.actionText}>Register</Text>
-          </TouchableOpacity>
+          {this.renderRegistrationButton()}
 
           <TouchableOpacity>
             <Text style={styles.actionText}>Share</Text>

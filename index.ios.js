@@ -59,7 +59,6 @@ var CodeCoreEvents = React.createClass({
 
   render() {
     var DEFAULT_ROUTE = {id: 'upcoming-events', };
-    // var DEFAULT_ROUTE = {id: 'event-details', event: require('./Screens/Events')[0]};
 
     if (this.state.bootstrapped == false) {
       return <View />;

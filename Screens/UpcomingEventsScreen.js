@@ -22,6 +22,23 @@ var UpcomingEventsScreen = React.createClass({
     this.props.navigator.push({id: 'event-details', event: event});
   },
 
+  renderRegistration(event:any) {
+    if (event.isRegistered) {
+      return (
+        <View style={{flex: 1, flexDirection: 'row'}}>
+          <Text style={[styles.smallText, styles.registered]}>Registered</Text>
+          <Icon name='ion|ios-checkmark-empty' size={15} style={{width: 15, height: 13}} color="green" />
+        </View>
+      );
+    } else {
+      return (
+        <Text style={[styles.smallText, styles.remaining]}>
+          {event.remaining} spots remaining
+        </Text>
+      );
+    }
+  },
+
   renderEvent(event:any) {
     return (
       <TouchableHighlight underlayColor="#FFE5E5" onPress={() => { this.showEventDetails(event) }}>
@@ -31,7 +48,7 @@ var UpcomingEventsScreen = React.createClass({
           </View>
           <Text style={styles.title}>{event.title}</Text>
           <View style={styles.footer}>
-            <Text style={[styles.smallText, styles.remaining]}>{event.remaining} spots remaining</Text>
+            {this.renderRegistration(event)}
           </View>
         </View>
       </TouchableHighlight>
@@ -79,6 +96,9 @@ var styles = StyleSheet.create({
   remaining: {
     color: "#666666",
   },
+  registered: {
+    color: 'green'
+  }
 })
 
 module.exports = UpcomingEventsScreen;

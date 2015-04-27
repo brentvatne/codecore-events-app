@@ -10,9 +10,19 @@ var AppConstants = require('../Constants/AppConstants');
 
 var _events = {all: [], registered: []};
 
+var _setState = (state) => {
+  _events.all = state;
+  _events.registered = [];
+  state.forEach((event) => {
+    if (event.isRegistered) {
+      _events.registered.push(event);
+    }
+  });
+}
+
 var store = createStore({
   setState(events) {
-    _events = events;
+    _setState(events);
   },
 
   getState() {
@@ -28,11 +38,11 @@ var store = createStore({
 
     switch(action.actionType) {
       case AppConstants.FETCH_EVENTS:
-        _events.all = action.response;
+        _setState(action.response);
         store.emitChange(action);
         break;
       case AppConstants.REGISTER_FOR_EVENT:
-         _events.registered.push(action.response)
+        _setState(action.response);
         store.emitChange(action);
         break;
     }
