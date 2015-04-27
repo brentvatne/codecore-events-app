@@ -19,6 +19,7 @@ var AppActions = require('./Actions/AppActions');
 var EventStore = require('./Stores/EventStore');
 var HomeScreen = require('./Screens/HomeScreen');
 var EventDetailsScreen = require('./Screens/EventDetailsScreen');
+var LocalStorage = require('./Stores/LocalStorage');
 
 var CodeCoreEvents = React.createClass({
   getInitialState() {
@@ -26,8 +27,7 @@ var CodeCoreEvents = React.createClass({
   },
 
   componentWillMount() {
-    this.setState({bootstrapped: true});
-    // LocalStorage.bootstrap(() => this.setState({bootstrapped: true}));
+    LocalStorage.bootstrap(() => this.setState({bootstrapped: true}));
   },
 
   renderScene(route, nav) {

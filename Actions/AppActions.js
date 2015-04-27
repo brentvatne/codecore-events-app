@@ -6,6 +6,7 @@ module.exports = {
   updateProfile(newProfile) {
     dispatcher.handleViewAction({
       actionType: AppConstants.UPDATE_PROFILE,
+      data: newProfile,
     });
   },
 

@@ -22,6 +22,7 @@ var UpcomingEventsScreen = require('./UpcomingEventsScreen');
 var ProfileScreen = require('./ProfileScreen');
 var AppActions = require('../Actions/AppActions');
 var EventStore = require('../Stores/EventStore');
+var ProfileStore = require('../Stores/ProfileStore');
 
 var HomeScreen = React.createClass({
   getInitialState():any {
@@ -36,16 +37,23 @@ var HomeScreen = React.createClass({
 
   componentWillMount() {
     EventStore.addChangeListener(this.updateEventsFromStore);
+    ProfileStore.addChangeListener(this.updateProfileFromStore);
     AppActions.fetchEvents();
+    this.updateProfileFromStore();
   },
 
   componentWillUnmount() {
     EventStore.removeChangeListener(this.updateEventsFromStore);
+    ProfileStore.removeChangeListener(this.updateProfileFromStore);
   },
 
   updateEventsFromStore() {
     var events = EventStore.getState();
     this.setState({events: events.all, registeredEvents: events.registered, loading: false});
+  },
+
+  updateProfileFromStore() {
+    this.setState({profile: ProfileStore.getState()});
   },
 
   renderLoading() {
@@ -94,7 +102,7 @@ var HomeScreen = React.createClass({
                   selected={this.state.selected === 'profile'}
                   onPress={() => { this.setState({selected: 'profile', title: 'Profile',}) }} >
 
-            <ProfileScreen navigator={this.props.navigator} />
+            <ProfileScreen profile={this.state.profile} navigator={this.props.navigator} />
           </SMXTabBarItemIOS>
         </SMXTabBarIOS>
       </View>
