@@ -21,6 +21,7 @@ var NavigationBar = require('../Components/NavigationBar');
 var UpcomingEventsScreen = require('./UpcomingEventsScreen');
 var ProfileScreen = require('./ProfileScreen');
 var MapScreen = require('./MapScreen');
+var AboutScreen = require('./AboutScreen');
 
 var AppActions = require('../Actions/AppActions');
 var EventStore = require('../Stores/EventStore');
@@ -87,7 +88,7 @@ var HomeScreen = React.createClass({
                   title={'About'}
                   selected={this.state.selected === 'about'}
                   onPress={() => { this.setState({selected: 'about', title: 'About',}) }} >
-            <Text>Stuff goes here</Text>
+            <AboutScreen />
           </SMXTabBarItemIOS>
 
           <SMXTabBarItemIOS
