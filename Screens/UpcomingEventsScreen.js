@@ -15,7 +15,6 @@ var {
 
 var NavigationBar = require('../Components/NavigationBar');
 var Icon = require('FAKIconImage');
-var EVENTS = require('./Events');
 
 var UpcomingEventsScreen = React.createClass({
   showEventDetails(event:any) {
@@ -41,7 +40,7 @@ var UpcomingEventsScreen = React.createClass({
 
   renderEvent(event:any) {
     return (
-      <TouchableHighlight underlayColor="#FFE5E5" onPress={() => { this.showEventDetails(event) }}>
+      <TouchableHighlight underlayColor="#FFE5E5" onPress={() => { this.showEventDetails(event) }} key={event.id}>
         <View style={styles.wrapper}>
           <View style={styles.header}>
             <Text style={styles.date}>{event.date} at {event.time}</Text>

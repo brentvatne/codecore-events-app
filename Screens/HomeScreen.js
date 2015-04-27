@@ -20,6 +20,8 @@ var SMXTabBarItemIOS = SMXTabBarIOS.Item;
 var NavigationBar = require('../Components/NavigationBar');
 var UpcomingEventsScreen = require('./UpcomingEventsScreen');
 var ProfileScreen = require('./ProfileScreen');
+var MapScreen = require('./MapScreen');
+
 var AppActions = require('../Actions/AppActions');
 var EventStore = require('../Stores/EventStore');
 var ProfileStore = require('../Stores/ProfileStore');
@@ -93,7 +95,7 @@ var HomeScreen = React.createClass({
                   title={'Map'}
                   selected={this.state.selected === 'map'}
                   onPress={() => { this.setState({selected: 'map', title: 'Map',}) }} >
-            <Text>Map</Text>
+            <MapScreen />
           </SMXTabBarItemIOS>
 
           <SMXTabBarItemIOS
