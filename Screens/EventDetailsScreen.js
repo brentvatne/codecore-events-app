@@ -115,6 +115,7 @@ var styles = StyleSheet.create({
     width: 60,
     height: 60,
     resizeMode: 'cover',
+    borderRadius: 3,
     marginTop: 2,
   },
   presenter: {
