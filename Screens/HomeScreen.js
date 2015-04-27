@@ -81,11 +81,11 @@ var HomeScreen = React.createClass({
           </SMXTabBarItemIOS>
 
           <SMXTabBarItemIOS
-                  iconName={'ion|ios-star-outline'}
-                  title={'My Schedule'}
-                  selected={this.state.selected === 'my-schedule'}
-                  onPress={() => { this.setState({selected: 'my-schedule', title: 'My Schedule',}) }} >
-            <Text>My Schedule</Text>
+                  iconName={'ion|ios-information-outline'}
+                  title={'About'}
+                  selected={this.state.selected === 'about'}
+                  onPress={() => { this.setState({selected: 'about', title: 'About',}) }} >
+            <Text>Stuff goes here</Text>
           </SMXTabBarItemIOS>
 
           <SMXTabBarItemIOS

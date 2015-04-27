@@ -19,6 +19,7 @@ var AppActions = require('../Actions/AppActions');
 var BlurView = require('react-native-blur').BlurView;
 var Overlay = require('react-native-overlay');
 var EventStore = require('../Stores/EventStore');
+var ActionSheetIOS = require('react-native/Libraries/ActionSheetIOS/ActionSheetIOS');
 
 var EventDetailsScreen = React.createClass({
   componentWillMount() {
@@ -47,6 +48,13 @@ var EventDetailsScreen = React.createClass({
 
   performRegistration() {
     AppActions.registerForEvent(this.props.event.id);
+  },
+
+  shareLink() {
+    ActionSheetIOS.showShareActionSheetWithOptions({
+      message: `Attend ${this.state.event.title} at CodeCore!`,
+      url: 'http://events.codecore.ca'
+    }, (success) => {}, (failure) => {})
   },
 
   renderRegistrationButton() {
@@ -103,7 +111,7 @@ var EventDetailsScreen = React.createClass({
         <View style={styles.actions}>
           {this.renderRegistrationButton()}
 
-          <TouchableOpacity>
+          <TouchableOpacity onPress={this.shareLink}>
             <Text style={styles.actionText}>Share</Text>
           </TouchableOpacity>
         </View>
@@ -156,6 +164,7 @@ var styles = StyleSheet.create({
     paddingLeft: 10,
     marginTop: 10,
     paddingRight: 15,
+    marginBottom: 20,
   },
   presenterInformation: {
     flex: 1,
