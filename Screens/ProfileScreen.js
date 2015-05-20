@@ -22,7 +22,22 @@ var t = require('tcomb-form-native');
 var Form = t.form.Form;
 Form.stylesheet = require('./FormStylesheet');
 
-var options = {};
+var options = {
+  fields: {
+    name: {
+      autoCorrect: false,
+      bufferDelay: 500,
+    },
+    email: {
+      autoCorrect: false,
+      bufferDelay: 500,
+    },
+    company: {
+      autoCorrect: false,
+      bufferDelay: 500,
+    }
+  }
+};
 
 var Person = t.struct({
   name: t.Str,

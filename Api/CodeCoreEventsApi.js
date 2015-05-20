@@ -20,7 +20,7 @@ module.exports = {
     var url = `http://events.codecore.ca/api/events/${eventId}/register`;
     var key = AppConstants.REGISTER_FOR_EVENT;
     var userProfile = ProfileStore.getState();
-    var params = {event_id: eventId, attendee: userProfile}
+    var params = {event_id: eventId, attendee: userProfile, sample: true}
 
     dispatch(key, ApiConstants.PENDING, params)
     post(url, params).then(handleResponse(key, params))
@@ -36,6 +36,6 @@ module.exports = {
     var params = {email: email}
 
     dispatch(key, ApiConstants.PENDING, params)
-    fetch(`${url}?email=${email}`).then(handleResponse(key, params))
+    fetch(`${url}?email=${email}&sample=true`).then(handleResponse(key, params))
   }
 }

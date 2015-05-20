@@ -77,7 +77,7 @@ var HomeScreen = React.createClass({
                   title={'Events'}
                   selected={this.state.selected === 'upcoming-events'}
                   onPress={() => { this.setState({selected: 'upcoming-events', title: 'Upcoming Events',}) }} >
-             <View style={{flex: 1}}>
+             <View style={{flex: 1, paddingBottom: 65}}>
                {this.renderLoading()}
                <UpcomingEventsScreen events={this.state.events} navigator={this.props.navigator} />
              </View>
